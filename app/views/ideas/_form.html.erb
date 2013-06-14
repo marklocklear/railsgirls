@@ -16,8 +16,17 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :completed %><br />
+    <%= f.check_box :completed %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label 'How succesfull do you think this idea might be?' %><br />
+    <%= f.label '1=least successful:10=Most likly to succeed' %><br />
+    <%= f.text_field :range %>
   </div>
   <div class="field">
     <%= f.label :picture %><br />
