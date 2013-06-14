@@ -1,13 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
 
-gem 'carrierwave'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,8 +15,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+# Gems used only for development and testing and
+# not required in production environments by default.
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+end
+
 gem 'jquery-rails'
 gem 'quiet_assets'
+gem 'carrierwave'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
