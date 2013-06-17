@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration
       t.text :team_members
       t.text :notes
       t.integer :idea_id
-      t.boolean :completed
+      t.boolean :completed, :default => false
 
       t.timestamps
     end

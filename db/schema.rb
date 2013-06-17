@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(:version => 20130617174858) do
     t.datetime "updated_at",  :null => false
     t.boolean  "completed"
     t.integer  "range"
-    t.integer  "task_id"
   end
 
   create_table "tasks", :force => true do |t|
@@ -29,9 +28,9 @@ ActiveRecord::Schema.define(:version => 20130617174858) do
     t.text     "team_members"
     t.text     "notes"
     t.integer  "idea_id"
-    t.boolean  "completed"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.boolean  "completed",    :default => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
 end
