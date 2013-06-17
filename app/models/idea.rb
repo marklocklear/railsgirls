@@ -1,7 +1,7 @@
 class Idea < ActiveRecord::Base
 	has_many :tasks
 	mount_uploader :picture, PictureUploader
-  attr_accessible :description, :name, :picture, :completed, :range
+  attr_accessible :description, :name, :picture, :completed, :range, :task_id
 
 	validates :name, :presence => true
 #	validates :range, :presence => true

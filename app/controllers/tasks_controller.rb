@@ -24,7 +24,6 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-		@ideas = Idea.all
     @task = Task.new
 
     respond_to do |format|
