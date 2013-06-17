@@ -1,5 +1,5 @@
 class Idea < ActiveRecord::Base
-  attr_accessible :description, :name, :picture, :completed, :range, :task_id
+  attr_accessible :description, :name, :picture, :completed, :range
 
   #
   # Validations

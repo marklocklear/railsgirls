@@ -32,7 +32,7 @@ describe Idea do
   	it { should validate_presence_of(:range) }
 
     context "mass assignment" do
-      [:description, :name, :picture, :completed, :range, :task_id].each do |attribute|
+      [:description, :name, :picture, :completed, :range].each do |attribute|
         it { should allow_mass_assignment_of(attribute) }
       end
     end
