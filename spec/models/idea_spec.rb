@@ -26,8 +26,16 @@ describe Idea do
 
   describe "validations" do
   	subject { create(:idea) }
-  	it {should validate_presence_of(:name)}
-  	it {should validate_presence_of(:description)}
+
+  	it { should validate_presence_of(:name) }
+  	it { should validate_presence_of(:description) }
+  	it { should validate_presence_of(:range) }
+
+    context "mass assignment" do
+      [:description, :name, :picture, :completed, :range, :task_id].each do |attribute|
+        it { should allow_mass_assignment_of(attribute) }
+      end
+    end
   end
 
   #
@@ -36,6 +44,7 @@ describe Idea do
 
   describe "associations" do
   	subject { create(:idea) }
+
   	it {should have_many(:tasks)}
   end
 
