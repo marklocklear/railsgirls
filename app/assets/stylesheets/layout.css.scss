@@ -1,0 +1,35 @@
+body {
+  padding-top: 70px;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+table, td, th {
+  vertical-align: middle !important;
+  border: none !important;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+th, td {
+  border-bottom: 1px solid #DDD !important;
+  text-align: left;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a.brand {
+  text-decoration: none;
+}

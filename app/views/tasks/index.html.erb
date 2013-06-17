@@ -17,7 +17,7 @@
     <td><%= task.name %></td>
     <td><%= task.team_members %></td>
     <td><%= task.notes %></td>
-    <td><%= task.idea_id %></td>
+    <td><%= link_to task.idea.name, task.idea %></td>
     <td><%= task.completed %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>

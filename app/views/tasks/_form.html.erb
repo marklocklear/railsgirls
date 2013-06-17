@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :idea_id %><br />
- 		<%= collection_select(:task, :idea_id, @ideas, :id, :name) %>
+ 		<%= collection_select(:task, :idea_id, Idea.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :completed %><br />
