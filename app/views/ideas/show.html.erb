@@ -16,7 +16,10 @@
   <b>Description:</b>
   <%= @idea.description %>
 </p>
-
+<p>
+  <b>Task:</b>
+  <%= @idea.task.name %>
+</p>
 <p>
   <b>Picture:</b>
 	<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>

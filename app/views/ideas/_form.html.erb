@@ -29,6 +29,10 @@
     <%= f.text_field :range %>
   </div>
   <div class="field">
+    <%= f.label :task %><br />
+    <%= collection_select(:idea, :task_id, @tasks, :id, :name) %>
+  </div>
+  <div class="field">
     <%= f.label :picture %><br />
 		<%= f.file_field :picture %>
   </div>
