@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :task do
+    idea
     name "MyString"
     team_members "MyText"
     notes "MyText"
-    idea_id 1
     completed false
   end
 end
