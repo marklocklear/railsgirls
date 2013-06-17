@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Railsgirls::Application.config.secret_token = 'de439e5f72121457134f676e23c513fa25c2691233dc76137f0df1ccb760b201fb0699720e3685fc96dd5ecc041e86f3b52e127db033660ebed98380274c8374'
+Railsgirls::Application.config.secret_token = 'f3ced0af2006fa33cf73ff1976050bad041841cbdb532226241609ec8224c30c9dd0a0b2d6258b93c6bb6ba882cb8988d81683f4e65839e2abdf3d110c5a93b3'
