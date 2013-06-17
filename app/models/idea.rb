@@ -1,4 +1,5 @@
 class Idea < ActiveRecord::Base
+	has_many :tasks
 	mount_uploader :picture, PictureUploader
   attr_accessible :description, :name, :picture, :completed, :range
 
