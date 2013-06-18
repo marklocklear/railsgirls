@@ -21,11 +21,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'ffaker'
 end
 
 gem 'jquery-rails'
 gem 'quiet_assets'
 gem 'carrierwave'
+gem 'will_paginate', '~> 3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -41,8 +43,3 @@ gem 'carrierwave'
 
 # To use debugger
 # gem 'debugger'
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'shoulda-matchers'
-end

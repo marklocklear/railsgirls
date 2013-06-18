@@ -22,4 +22,25 @@ class Idea < ActiveRecord::Base
 
   mount_uploader :picture, PictureUploader
 
+  #
+  # Scopes
+  #
+
+  scope :random, order("random()")
+  scope :crazy_query, where("range = 8").order("created_at ASC").limit(5)
+  scope :timely, -> { where(["created_at <= ?", Time.now]) }
+  scope :ranged, lambda { |range| where(:range => range) if range }
+
 end
+
+
+
+
+
+
+
+
+
+
+
+

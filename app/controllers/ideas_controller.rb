@@ -2,7 +2,7 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.all
+    @ideas = Idea.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

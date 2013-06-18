@@ -43,7 +43,7 @@ describe Task do
   describe "associations" do
   	subject { create(:task) }
 
-  	it {should belong_to(:idea)}
+  	it { should belong_to(:idea) }
   end
 
 end

@@ -1,4 +1,6 @@
-<h1>Listing tasks</h1>
+<h1>Listing Tasks</h1>
+
+<%= will_paginate @tasks %>
 
 <table>
   <tr>
@@ -10,6 +12,10 @@
     <th></th>
     <th></th>
     <th></th>
+  </tr>
+
+  <tr>
+    <td colspan="6"><%= link_to 'New Task', new_task_path %></td>
   </tr>
 
 <% @tasks.each do |task| %>
