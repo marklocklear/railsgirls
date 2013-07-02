@@ -1,0 +1,31 @@
+<h1>Listing Ideas</h1>
+
+<%= will_paginate @ideas %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Range</th>
+    <th>Tasks</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr>
+    <td colspan="5"><%= link_to 'New Idea', new_idea_path %></td>
+  </tr>
+
+<% @ideas.each do |idea| %>
+  <tr>
+    <td><%= link_to idea.name, idea %></td>
+    <td><%= idea.description %></td>
+    <td><%= idea.range %></td>
+    <td style="width: 65px;"><%= pluralize(idea.tasks.count, 'Task') %></td>
+    <td>
+      <%= link_to 'Show', idea %>
+      <%= link_to 'Edit', edit_idea_path(idea) %>
+      <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>

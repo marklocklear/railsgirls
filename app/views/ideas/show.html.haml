@@ -1,0 +1,31 @@
+#showIdea
+  %p#notice= notice
+
+  %p
+    %b Name:
+    = @idea.name
+  %p
+    %b Completed?:
+    = @idea.completed
+  %p
+    %b Probability of success:
+    = @idea.range
+  %p
+    %b Description:
+    = simple_format @idea.description
+  %p
+    %b Tasks:
+    %ul#tasks
+      - for task in @idea.tasks
+        %li
+          = check_box_tag 'completed', 'yes', task.completed, :class => 'completed', 'data-id' => task.id
+          = link_to task.name, task
+          - if task.due_date
+            %span{class: "dueDate #{(task.due_date < Time.zone.now) ? 'late' : 'onTime'}"}= "Due: #{l(task.due_date, format: :long)}"
+  %p
+    %b Picture:
+    = image_tag(@idea.picture_url, :width => 600) if @idea.picture.present?
+
+  = link_to 'Edit', edit_idea_path(@idea)
+  |
+  = link_to 'Back', ideas_path

@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @task.name
+%p
+  %b Team members:
+  = @task.team_members
+%p
+  %b Notes:
+  = @task.notes
+%p
+  %b Idea:
+  = @task.idea.name
+%p
+  %b Completed:
+  = @task.completed
+%p
+  %b Due Date:
+  = l(@task.due_date, format: :long) if @task.due_date
+
+= link_to 'Edit', edit_task_path(@task)
+|
+= link_to 'Back To Idea', @task.idea
+|
+= link_to 'All Tasks', tasks_path
