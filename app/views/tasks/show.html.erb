@@ -24,5 +24,10 @@
   <%= @task.completed %>
 </p>
 
+<p>
+  <b>Due Date:</b>
+  <%= l(@task.due_date, format: :long) if @task.due_date %>
+</p>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

@@ -25,6 +25,7 @@ group :development, :test do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'quiet_assets'
 gem 'carrierwave'
 gem 'will_paginate', '~> 3.0'
@@ -42,4 +43,4 @@ gem 'bcrypt-ruby', :require => "bcrypt"
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'

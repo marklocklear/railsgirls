@@ -31,6 +31,10 @@
     <%= f.label :completed %><br />
     <%= f.check_box :completed %>
   </div>
+  <div class="field">
+    <%= f.label :due_date %><br />
+    <%= f.text_field :due_date, class: "datepicker" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

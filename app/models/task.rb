@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :completed, :idea_id, :name, :notes, :team_members
+  attr_accessible :completed, :idea_id, :name, :notes, :team_members, :due_date
 
   #
   # Validations
