@@ -26,7 +26,7 @@
 
 <% @ideas.each do |idea| %>
   <tr>
-    <td><%= idea.name %></td>
+    <td><%= link_to idea.name, idea %></td>
     <td><%= idea.description %></td>
     <td><%= idea.range %></td>
     <td><%= link_to 'Show', idea %></td>

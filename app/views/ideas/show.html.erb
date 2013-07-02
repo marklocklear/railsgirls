@@ -14,14 +14,17 @@
 </p>
 <p>
   <b>Description:</b>
-  <%= @idea.description %>
+  <%= simple_format @idea.description %>
 </p>
 <p>
   <b>Tasks:</b>
-  <ul>
+  <ul id="tasks">
     <% for task in @idea.tasks %>
-      <li><%= link_to task.name, task %></li>
-      <% end %>
+      <li>
+        <%= check_box_tag 'completed', 'yes', task.completed, :class => 'completed', 'data-id' => task.id %>
+        <%= link_to task.name, task %>
+      </li>
+    <% end %>
   </ul>
 </p>
 <p>
