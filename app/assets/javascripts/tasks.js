@@ -2,8 +2,9 @@ $(function() {
   $('.datepicker').datepicker();
 
   $('.completed').click(function(){
-    var id = $(this).attr('data-id');
-    var checked = $(this).is(':checked');
+    var element = $(this);
+    var id = element.attr('data-id');
+    var checked = element.is(':checked');
 
     $.d(id);
     $.d("Checked: "+checked);
@@ -14,11 +15,8 @@ $(function() {
       dataType: 'script',
       data: { 'task': { 'completed': checked } }
     }).done(function() {
-      if(checked) {
-        $(this).addClass("done");
-      } else {
-        $(this).addClass("notDone");
-      }
+      $.d("Done!");
+      element.parent('li').effect("highlight", {color:"#ffff99"}, 3000 );
     });
   });
 });
