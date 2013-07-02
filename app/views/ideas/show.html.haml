@@ -1,3 +1,7 @@
+- content_for :head do
+  :css
+    //.description b { color: green; }
+
 #showIdea
   %p#notice= notice
 
@@ -10,7 +14,7 @@
   %p
     %b Probability of success:
     = @idea.range
-  %p
+  %p.description
     %b Description:
     = simple_format @idea.description
   %p
@@ -22,9 +26,10 @@
           = link_to task.name, task
           - if task.due_date
             %span{class: "dueDate #{(task.due_date < Time.zone.now) ? 'late' : 'onTime'}"}= "Due: #{l(task.due_date, format: :long)}"
-  %p
-    %b Picture:
-    = image_tag(@idea.picture_url, :width => 600) if @idea.picture.present?
+  - if @idea.picture.present?
+    %p
+      %b Picture:
+      = image_tag(@idea.picture_url, :width => 600)
 
   = link_to 'Edit', edit_idea_path(@idea)
   |
